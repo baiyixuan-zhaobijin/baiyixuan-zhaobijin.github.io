@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>laravel-admin框架安装 | 白衣轩</title>
+  <title>laravel-admin二次开发·1 | 白衣轩</title>
   <meta name="keywords" content=" laravel , laravel-admin , PHP , 快速开发 ">
-  <meta name="description" content="laravel-admin框架安装 | 白衣轩">
+  <meta name="description" content="laravel-admin二次开发·1 | 白衣轩">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="创建模型： php artisan make:model Employee  根据模型，创建控制器： php artisan admin:make ConsultController --model&#x3D;App\Consult  添加路由： $router-&gt;resource(&#39;consult&#39;, ConsultController::class);  添加菜单：    设置用">
 <meta property="og:type" content="article">
@@ -424,9 +424,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-laravel-admin框架安装" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-laravel-admin二次开发·1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">laravel-admin框架安装</h1>
+        <h1 class="article-title">laravel-admin二次开发·1</h1>
     
     <div class="article-meta">
         
@@ -460,12 +460,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2020-05-24 22:04:02'>2020-05-24 21:28</time>
+            Created At : <time class="date" title='Updated At: 2020-05-25 20:24:59'>2020-05-25 20:17</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:151</span>
+        <span>Count:280</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -484,7 +484,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#laravel-admin框架安装"><span class="toc-text">laravel-admin框架安装</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -500,33 +500,62 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="laravel-admin框架安装"><a href="#laravel-admin框架安装" class="headerlink" title="laravel-admin框架安装"></a>laravel-admin框架安装</h3><ol>
-<li><p><code>composer create-project --prefer-dist laravel/laravel blog</code></p>
+        <ol>
+<li><p>创建模型： <code>php artisan make:model Employee</code></p>
 </li>
-<li><p>修改根目录下的<code>.env</code>配置文件，修改相应数据库连接</p>
+<li><p>根据模型，创建控制器： <code>php artisan admin:make ConsultController --model=App\Consult</code></p>
 </li>
-<li><p><code>composer require encore/laravel-admin</code></p>
+<li><p>添加路由： <code>$router-&gt;resource(&#39;consult&#39;, ConsultController::class);</code></p>
 </li>
-<li><p>发布资源：<code>php artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot;</code></p>
+<li><p>添加菜单：</p>
+<p> <img src="https://s1.ax1x.com/2020/05/25/tC3r5Q.png" alt="添加菜单"></p>
 </li>
-<li><p>修改数据库配置：<code>\config\database.php</code></p>
-<pre><code class="php">&#39;charset&#39; =&gt; &#39;utf8&#39;,
-&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,
-&#39;prefix&#39; =&gt; &#39;&#39;,
-&#39;strict&#39; =&gt; true,
-&#39;engine&#39; =&gt; &#39;InnoDB&#39;</code></pre>
+<li><p>设置用户id:<br> <code>$form-&gt;number(&#39;userId&#39;, __(&#39;UserId&#39;))-&gt;disable()-&gt;default(Admin::user()-&gt;id);</code></p>
+<p>6.更新表模型<br> <code>php artisan make:migration add_tags_to_orders_table</code></p>
 </li>
-<li><p>创建表：<code>php artisan admin:install</code></p>
-</li>
-<li><p>disk配置：在<code>\config/filesystems.php</code>中加入</p>
-<pre><code class="php">&#39;admin&#39; =&gt; [
-            &#39;driver&#39; =&gt; &#39;local&#39;,
-            &#39;root&#39; =&gt; public_path(&#39;upload&#39;),
-            &#39;visibility&#39; =&gt; &#39;public&#39;,
-            &#39;url&#39; =&gt; env(&#39;APP_URL&#39;).&#39;/public/puload/&#39;,
-            ]</code></pre>
+<li><p>创建行操作<br> 在model中定义表主键 protected $primaryKey = ‘Id’;<br> 执行命令： <code>php artisan admin:action Post\\Remind --grid-row --name=&quot;提醒&quot;</code><br> 修改Remind 文件</p>
+<pre><code class="php">&lt;?php
+
+namespace App\Admin\Actions\Post;
+
+use Encore\Admin\Actions\RowAction;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+class Remind extends RowAction
+{
+   public $name = &#39;提醒&#39;;
+
+   public function handle(Model $model,Request $request)
+   {
+
+       return $this-&gt;response()-&gt;success(&#39;复制成功.&#39;.$model-&gt;Id)-&gt;refresh();
+   }
+}
+</code></pre>
 </li>
 </ol>
+<ol start="8">
+<li><p>注册插件使用</p>
+</li>
+<li><p>修改\vendor\laravel-admin-ext\registration\src\Http\Controllers\VerificationController.php文件，加入“use\App\User;”<br>RegisterController.php 删除未引用到的库</p>
+</li>
+<li><p>laravel邮件配置</p>
+<p>\config\mail.php配置</p>
+</li>
+</ol>
+<pre><code class="php">&#39;from&#39; =&gt; [
+     &#39;address&#39; =&gt; env(&#39;MAIL_FROM_ADDRESS&#39;, &#39;13046679681@163.com&#39;),
+     &#39;name&#39; =&gt; env(&#39;MAIL_FROM_NAME&#39;, &#39;上海码甸网络科技有限公司&#39;),
+ ]</code></pre>
+<p>​    .env中配置</p>
+<pre><code class="php">   MAIL_MAILER=smtp
+   MAIL_HOST=smtp.163.com
+   MAIL_PORT=465
+   MAIL_USERNAME=13046679681@163.com
+   MAIL_PASSWORD=*******
+   MAIL_ENCRYPTION=SSL
+   MAIL_FROM_ADDRESS=13046679681@163.com
+   MAIL_FROM_NAME=&quot;${APP_NAME}&quot;</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 13046679681@163.com </span>
