@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>laravel-admin框架安装 | 白衣轩</title>
-  <meta name="keywords" content=" laravel , laravel-admin , PHP , 快速开发 ">
-  <meta name="description" content="laravel-admin框架安装 | 白衣轩">
+  <title>人生的诗·3070～3072 | 白衣轩</title>
+  <meta name="keywords" content=" 人生的诗 ">
+  <meta name="description" content="人生的诗·3070～3072 | 白衣轩">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1. 大红袍笔记： 茉莉花是小家碧玉，龙井是官气十足的男子，碧螺春有些村姑的味道，普洱很贵族，黄山毛峰又孤傲了些。 干净男子的香，相当沉稳，隐忍，同时饱含深情，让人动容。  书纪： 真正的爱情，也许就是明明知道结局，还会如初恋般义无反顾，不留后路。这样的爱情早已不是要向自己或是这个世界证明些什么，而只是真正地爱了。就像阳光贪恋午后，就像女人贪恋青春，就像生命贪恋人间…..爱了，爱了，爱了呀，不要再">
 <meta property="og:type" content="article">
@@ -380,9 +380,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-laravel-admin框架安装" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-人生的诗·3070～3072" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">laravel-admin框架安装</h1>
+        <h1 class="article-title">人生的诗·3070～3072</h1>
     
     <div class="article-meta">
         
@@ -391,11 +391,9 @@
         <span class="book">
             <i class="iconfont icon-category"></i>
             
-            <a  data-rel="后端">后端</a> > 
+            <a  data-rel="写作">写作</a> > 
             
-            <a  data-rel="PHP">PHP</a> > 
-            
-            <a  data-rel="laravel-admin">laravel-admin</a>
+            <a  data-rel="人生的诗">人生的诗</a>
             
         </span>
         
@@ -403,25 +401,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">laravel</a>
-            
-            <a class="color4">laravel-admin</a>
-            
-            <a class="color4">PHP</a>
-            
-            <a class="color5">快速开发</a>
+            <a class="color5">人生的诗</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2020-05-24 22:04:02'>2020-05-24 21:28</time>
+            Created At : <time class="date" title='Updated At: 2020-05-25 08:15:39'>2020-05-25 08:13</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:151</span>
+        <span>Count:310</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -440,7 +432,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#laravel-admin框架安装"><span class="toc-text">laravel-admin框架安装</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#3070-人间与“人间”"><span class="toc-text">3070. 人间与“人间”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3071-一念，一生"><span class="toc-text">3071. 一念，一生</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3072-心伤"><span class="toc-text">3072. 心伤</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -456,33 +448,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="laravel-admin框架安装"><a href="#laravel-admin框架安装" class="headerlink" title="laravel-admin框架安装"></a>laravel-admin框架安装</h3><ol>
-<li><p><code>composer create-project --prefer-dist laravel/laravel blog</code></p>
-</li>
-<li><p>修改根目录下的<code>.env</code>配置文件，修改相应数据库连接</p>
-</li>
-<li><p><code>composer require encore/laravel-admin</code></p>
-</li>
-<li><p>发布资源：<code>php artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot;</code></p>
-</li>
-<li><p>修改数据库配置：<code>\config\database.php</code></p>
-<pre><code class="php">&#39;charset&#39; =&gt; &#39;utf8&#39;,
-&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,
-&#39;prefix&#39; =&gt; &#39;&#39;,
-&#39;strict&#39; =&gt; true,
-&#39;engine&#39; =&gt; &#39;InnoDB&#39;</code></pre>
-</li>
-<li><p>创建表：<code>php artisan admin:install</code></p>
-</li>
-<li><p>disk配置：在<code>\config/filesystems.php</code>中加入</p>
-<pre><code class="php">&#39;admin&#39; =&gt; [
-            &#39;driver&#39; =&gt; &#39;local&#39;,
-            &#39;root&#39; =&gt; public_path(&#39;upload&#39;),
-            &#39;visibility&#39; =&gt; &#39;public&#39;,
-            &#39;url&#39; =&gt; env(&#39;APP_URL&#39;).&#39;/public/puload/&#39;,
-            ]</code></pre>
-</li>
-</ol>
+        <h4 id="3070-人间与“人间”"><a href="#3070-人间与“人间”" class="headerlink" title="3070. 人间与“人间”"></a>3070. 人间与“人间”</h4><p>也许<br> 你与她的人间<br> 从来只是两座隔海而望的孤岛<br> 偶然地相会相念<br> 都不过是梦神的玩笑<br> 而后在各自的人间<br> 行走在各自人间的道<br> 惟有月华里的思念是孤岛上汹涌的风涛<br> 一念而起的时候<br> 便已把你淹没<br> 像海岛陷于大海的寂寞<br> 纵千万年的时光<br> 都不曾改变一分一毫</p>
+<h4 id="3071-一念，一生"><a href="#3071-一念，一生" class="headerlink" title="3071. 一念，一生"></a>3071. 一念，一生</h4><p>一念<br> 一生<br> 这是痴妄的坚执<br> 还是相思的坚韧<br> 爱似琉璃<br> 在光阳里明澈坚硬<br> 在灰暗里脆薄如纸<br> 只是曾经的相遇<br> 有多么美丽<br> 心底的思念便有多么灿烂<br> 珍而重之地捧在灵魂的圣殿<br> 荣耀地照亮人间天地</p>
+<h4 id="3072-心伤"><a href="#3072-心伤" class="headerlink" title="3072. 心伤"></a>3072. 心伤</h4><p>无意<br> 跌落在心伤的风雨世界<br> 冰冷的寒凉的触觉在蔓延<br> 这个人间<br> 恍惚是无尽地坠落<br> 这没有尽头的深渊<br> 爱<br> 成了虚幻的希望<br> 意志<br> 那是色厉内荏的“脊梁”<br> 惟有幸福<br> 像燎原的火种<br> 在生发苍天的巨树<br> 只是一切的行进<br> 都在风雨里<br> 随时都会毁灭<br> 随时都会炸裂</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 13046679681@163.com </span>
