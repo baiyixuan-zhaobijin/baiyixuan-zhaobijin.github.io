@@ -6,18 +6,19 @@
   <meta name="keywords" content=" laravel , laravel-admin , PHP , 快速开发 ">
   <meta name="description" content="laravel-admin二次开发·1 | 白衣轩">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="1. 植物笔记： 岸上很多坟，旧坟，新坟。并不觉得异样和可怕，只不过是另一种植物。散发出更为孤独的气息。坟边有野花，烂漫地开着，生与死，都是这样自然。  书纪： 也许，我们都只是被时光包养的情人，只是其中的分寸拿捏，进退尺度，一旦把握失据，便是让自己做了怨妇，让时光戴了狰狞的面具。  2. 菖蒲笔记： 有些事物就是天生狐媚，即使一副冷冷的样子，亦是惊天动地的烈艳。  菖蒲花 我曾经多么希望能够遇见">
+<meta name="description" content="v2rayN安装配置安装环境：CentOS  安装基础软件： yum update -y &amp;&amp; yum install curl -y  安装v2rayN：bash &lt;(curl -s -L https:&#x2F;&#x2F;git.io&#x2F;v2ray.sh)  安装时，记录下：port和uuid  启动服务： systemctl start v2ray  systemctl enable v2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="植物|菖蒲">
-<meta property="og:url" content="http://yoursite.com/2020/05/26/%E6%A4%8D%E7%89%A9%C2%B7%E8%8F%96%E8%92%B2/index.html">
+<meta property="og:title" content="v2rayN安装配置">
+<meta property="og:url" content="http://yoursite.com/2020/05/26/v2rayN%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="白衣轩">
-<meta property="og:description" content="1. 植物笔记： 岸上很多坟，旧坟，新坟。并不觉得异样和可怕，只不过是另一种植物。散发出更为孤独的气息。坟边有野花，烂漫地开着，生与死，都是这样自然。  书纪： 也许，我们都只是被时光包养的情人，只是其中的分寸拿捏，进退尺度，一旦把握失据，便是让自己做了怨妇，让时光戴了狰狞的面具。  2. 菖蒲笔记： 有些事物就是天生狐媚，即使一副冷冷的样子，亦是惊天动地的烈艳。  菖蒲花 我曾经多么希望能够遇见">
-<meta property="article:published_time" content="2020-05-26T00:12:23.000Z">
-<meta property="article:modified_time" content="2020-05-26T00:33:00.997Z">
+<meta property="og:description" content="v2rayN安装配置安装环境：CentOS  安装基础软件： yum update -y &amp;&amp; yum install curl -y  安装v2rayN：bash &lt;(curl -s -L https:&#x2F;&#x2F;git.io&#x2F;v2ray.sh)  安装时，记录下：port和uuid  启动服务： systemctl start v2ray  systemctl enable v2">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/26/tisbQ0.png">
+<meta property="article:published_time" content="2020-05-26T08:56:10.000Z">
+<meta property="article:modified_time" content="2020-05-26T09:01:10.377Z">
 <meta property="article:author" content="Sun Zhao">
-<meta property="article:tag" content="散文">
-<meta property="article:tag" content="雪小禅">
+<meta property="article:tag" content="翻墙">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/26/tisbQ0.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -91,7 +92,7 @@
 
 
 <ul>
-    <li><div class="all active" data-rel="All">All<small>(17)</small></div></li>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(18)</small></div></li>
     
         
             
@@ -104,6 +105,14 @@
                         </li>
                             
                     </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(1)</small></div>
                 
             </li>
             
@@ -222,8 +231,8 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="17">
-<input type="hidden" id="yelog_site_word_count" value="4.3k">
+<input type="hidden" id="yelog_site_posts_number" value="18">
+<input type="hidden" id="yelog_site_word_count" value="4.4k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -233,7 +242,7 @@
     <div class="nav-right">
         <div class="friends-area">
     <div class="friends-title">
-        Links
+        友情链接
         <i class="iconfont icon-left"></i>
     </div>
     <div class="friends-content">
@@ -248,7 +257,7 @@
     <div class="right-top">
         <div id="default-panel">
             <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
-            <div class="right-title">All</div>
+            <div class="right-title">全部文章</div>
             <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
         </div>
         <div id="search-panel">
@@ -301,6 +310,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>翻墙</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>规划</a>
             </li>
         
@@ -323,7 +336,15 @@
     
     <nav id="title-list-nav">
         
-        <a  class="All 人生规划 时间计划 "
+        <a  class="全部文章 工具 "
+           href="/2020/05/26/v2rayN%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"
+           data-tag="翻墙"
+           data-author="" >
+            <span class="post-title" title="v2rayN安装配置">v2rayN安装配置</span>
+            <span class="post-date" title="2020-05-26 16:56:10">2020/05/26</span>
+        </a>
+        
+        <a  class="全部文章 人生规划 时间计划 "
            href="/2020/05/26/%E6%97%B6%E9%97%B4%E8%AE%A1%E5%88%92%C2%B71/"
            data-tag="规划"
            data-author="" >
@@ -331,7 +352,7 @@
             <span class="post-date" title="2020-05-26 10:34:11">2020/05/26</span>
         </a>
         
-        <a  class="All 读书 那莲那禅那光阴 "
+        <a  class="全部文章 读书 那莲那禅那光阴 "
            href="/2020/05/26/%E6%A4%8D%E7%89%A9%C2%B7%E8%8F%96%E8%92%B2/"
            data-tag="散文,雪小禅"
            data-author="" >
@@ -339,7 +360,7 @@
             <span class="post-date" title="2020-05-26 08:12:23">2020/05/26</span>
         </a>
         
-        <a  class="All 写作 人生的诗 "
+        <a  class="全部文章 写作 人生的诗 "
            href="/2020/05/26/%E4%BA%BA%E7%94%9F%E7%9A%84%E8%AF%97%C2%B73073%EF%BD%9E3076/"
            data-tag="人生的诗"
            data-author="" >
@@ -347,7 +368,7 @@
             <span class="post-date" title="2020-05-26 07:49:39">2020/05/26</span>
         </a>
         
-        <a  class="All 人生日志 "
+        <a  class="全部文章 人生日志 "
            href="/2020/05/25/20-05-26/"
            data-tag="人生日志"
            data-author="" >
@@ -355,7 +376,7 @@
             <span class="post-date" title="2020-05-25 21:29:24">2020/05/25</span>
         </a>
         
-        <a  class="All 后端 PHP laravel-admin "
+        <a  class="全部文章 后端 PHP laravel-admin "
            href="/2020/05/25/laravel-admin%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%C2%B71/"
            data-tag="laravel,laravel-admin,PHP,快速开发"
            data-author="" >
@@ -363,7 +384,7 @@
             <span class="post-date" title="2020-05-25 20:17:00">2020/05/25</span>
         </a>
         
-        <a  class="All 码甸 工作计划 "
+        <a  class="全部文章 码甸 工作计划 "
            href="/2020/05/25/%E7%A0%81%E7%94%B8%C2%B720-05-25%EF%BD%9E20-05-31%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92/"
            data-tag="码甸"
            data-author="" >
@@ -371,7 +392,7 @@
             <span class="post-date" title="2020-05-25 12:04:00">2020/05/25</span>
         </a>
         
-        <a  class="All 读书 那莲那禅那光阴 "
+        <a  class="全部文章 读书 那莲那禅那光阴 "
            href="/2020/05/25/%E5%A4%A7%E7%BA%A2%E8%A2%8D%C2%B7%E9%93%81%E8%A7%82%E9%9F%B3/"
            data-tag="散文,雪小禅"
            data-author="" >
@@ -379,7 +400,7 @@
             <span class="post-date" title="2020-05-25 08:26:01">2020/05/25</span>
         </a>
         
-        <a  class="All 写作 人生的诗 "
+        <a  class="全部文章 写作 人生的诗 "
            href="/2020/05/25/%E4%BA%BA%E7%94%9F%E7%9A%84%E8%AF%97%C2%B73070%EF%BD%9E3072/"
            data-tag="人生的诗"
            data-author="" >
@@ -387,7 +408,7 @@
             <span class="post-date" title="2020-05-25 08:13:32">2020/05/25</span>
         </a>
         
-        <a  class="All 人生日志 "
+        <a  class="全部文章 人生日志 "
            href="/2020/05/24/20-05-25/"
            data-tag="人生日志"
            data-author="" >
@@ -395,7 +416,7 @@
             <span class="post-date" title="2020-05-24 21:52:36">2020/05/24</span>
         </a>
         
-        <a  class="All 后端 PHP laravel-admin "
+        <a  class="全部文章 后端 PHP laravel-admin "
            href="/2020/05/24/laravel-admin%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/"
            data-tag="laravel,laravel-admin,PHP,快速开发"
            data-author="" >
@@ -403,7 +424,7 @@
             <span class="post-date" title="2020-05-24 21:35:10">2020/05/24</span>
         </a>
         
-        <a  class="All 后端 PHP laravel-admin "
+        <a  class="全部文章 后端 PHP laravel-admin "
            href="/2020/05/24/laravel-admin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"
            data-tag="laravel,laravel-admin,PHP,快速开发"
            data-author="" >
@@ -411,7 +432,7 @@
             <span class="post-date" title="2020-05-24 21:28:35">2020/05/24</span>
         </a>
         
-        <a  class="All 写作 人生的诗 "
+        <a  class="全部文章 写作 人生的诗 "
            href="/2020/05/24/%E4%BA%BA%E7%94%9F%E7%9A%84%E8%AF%97%C2%B73066%EF%BD%9E3069/"
            data-tag="人生的诗"
            data-author="" >
@@ -419,7 +440,7 @@
             <span class="post-date" title="2020-05-24 15:52:00">2020/05/24</span>
         </a>
         
-        <a  class="All 人生日志 "
+        <a  class="全部文章 人生日志 "
            href="/2020/05/24/20-05-24/"
            data-tag="人生日志"
            data-author="" >
@@ -427,7 +448,7 @@
             <span class="post-date" title="2020-05-24 07:53:00">2020/05/24</span>
         </a>
         
-        <a  class="All 人生日志 "
+        <a  class="全部文章 人生日志 "
            href="/2020/05/23/20-05-23/"
            data-tag="人生日志"
            data-author="" >
@@ -435,7 +456,7 @@
             <span class="post-date" title="2020-05-23 09:16:08">2020/05/23</span>
         </a>
         
-        <a  class="All 读书 那莲那禅那光阴 "
+        <a  class="全部文章 读书 那莲那禅那光阴 "
            href="/2020/05/23/%E8%AF%BB%E4%B9%A6%C2%B7%E9%82%A3%E8%8E%B2%E9%82%A3%E7%A6%85%E9%82%A3%E5%85%89%E9%98%B4%C2%B7%E9%87%8E%E8%8A%B1%E9%80%86%E9%A3%8E%E8%80%8C%E8%A1%8C%20%E4%B8%80%E5%8F%AA%E5%8F%AB%E7%88%B1%E6%83%85%E7%9A%84%E7%8C%AB/"
            data-tag="散文,雪小禅"
            data-author="" >
@@ -443,7 +464,7 @@
             <span class="post-date" title="2020-05-23 08:49:32">2020/05/23</span>
         </a>
         
-        <a  class="All 写作 人生的诗 "
+        <a  class="全部文章 写作 人生的诗 "
            href="/2020/05/23/%E4%BA%BA%E7%94%9F%E7%9A%84%E8%AF%97%C2%B73062%EF%BD%9E3065/"
            data-tag="诗"
            data-author="" >
@@ -451,7 +472,7 @@
             <span class="post-date" title="2020-05-23 07:40:00">2020/05/23</span>
         </a>
         
-        <a  class="All 读书 那莲那禅那光阴 "
+        <a  class="全部文章 读书 那莲那禅那光阴 "
            href="/2020/05/23/%E8%AF%BB%E4%B9%A6%C2%B7%E9%82%A3%E8%8E%B2%E9%82%A3%E7%A6%85%E9%82%A3%E5%85%89%E9%98%B4%C2%B7%E9%99%8C%E7%94%9F%20%E9%B1%BC%E7%9A%84%E5%AD%A4%E7%8B%AC/"
            data-tag="散文,雪小禅"
            data-author="" >
@@ -512,16 +533,16 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2020-05-25 20:24:59'>2020-05-25 20:17</time>
+            发布时间 : <time class="date" title='最后更新: 2020-05-25 20:24:59'>2020-05-25 20:17</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:280</span>
+        <span>字数:280</span>
         
         
         <span id="busuanzi_container_page_pv">
-            Views 👀 :<span id="busuanzi_value_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
                 <span class="count-comment">
                     <span class="spinner">
                       <div class="cube1"></div>
