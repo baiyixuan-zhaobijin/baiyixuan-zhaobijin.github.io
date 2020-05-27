@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>laravel-admin二次开发·1 | 白衣轩</title>
-  <meta name="keywords" content=" laravel , laravel-admin , PHP , 快速开发 ">
-  <meta name="description" content="laravel-admin二次开发·1 | 白衣轩">
+  <title>铁线蕨|羊齿植物|那些野生的树 | 白衣轩</title>
+  <meta name="keywords" content=" 散文 , 雪小禅 ">
+  <meta name="description" content="铁线蕨|羊齿植物|那些野生的树 | 白衣轩">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Welcome to my blog, enter password to read.">
 <meta property="og:type" content="article">
@@ -539,9 +539,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-laravel-admin二次开发·1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-铁线蕨·羊齿植物·那些野生的树" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">laravel-admin二次开发·1</h1>
+        <h1 class="article-title">铁线蕨|羊齿植物|那些野生的树</h1>
     
     <div class="article-meta">
         
@@ -550,11 +550,9 @@
         <span class="book">
             <i class="iconfont icon-category"></i>
             
-            <a  data-rel="后端">后端</a> > 
+            <a  data-rel="读书">读书</a> > 
             
-            <a  data-rel="PHP">PHP</a> > 
-            
-            <a  data-rel="laravel-admin">laravel-admin</a>
+            <a  data-rel="那莲那禅那光阴">那莲那禅那光阴</a>
             
         </span>
         
@@ -562,25 +560,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">laravel</a>
+            <a class="color3">散文</a>
             
-            <a class="color4">laravel-admin</a>
-            
-            <a class="color4">PHP</a>
-            
-            <a class="color5">快速开发</a>
+            <a class="color4">雪小禅</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2020-05-26 19:19:26'>2020-05-25 20:17</time>
+            Created At : <time class="date" title='Updated At: 2020-05-27 09:38:52'>2020-05-27 09:19</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:280</span>
+        <span>Count:572</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -599,7 +593,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#铁线蕨"><span class="toc-text">铁线蕨</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#笔记"><span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#书纪"><span class="toc-text">书纪</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#羊齿植物"><span class="toc-text">羊齿植物</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#笔记-1"><span class="toc-text">笔记</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#那些野生的植物"><span class="toc-text">那些野生的植物</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#笔记-2"><span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#书纪-1"><span class="toc-text">书纪</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -615,62 +609,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p>创建模型： <code>php artisan make:model Employee</code></p>
-</li>
-<li><p>根据模型，创建控制器： <code>php artisan admin:make ConsultController --model=App\Consult</code></p>
-</li>
-<li><p>添加路由： <code>$router-&gt;resource(&#39;consult&#39;, ConsultController::class);</code></p>
-</li>
-<li><p>添加菜单：</p>
-<p> <img src="https://s1.ax1x.com/2020/05/25/tC3r5Q.png" alt="添加菜单"></p>
-</li>
-<li><p>设置用户id:<br> <code>$form-&gt;number(&#39;userId&#39;, __(&#39;UserId&#39;))-&gt;disable()-&gt;default(Admin::user()-&gt;id);</code></p>
-<p>6.更新表模型<br> <code>php artisan make:migration add_tags_to_orders_table</code></p>
-</li>
-<li><p>创建行操作<br> 在model中定义表主键 protected $primaryKey = ‘Id’;<br> 执行命令： <code>php artisan admin:action Post\\Remind --grid-row --name=&quot;提醒&quot;</code><br> 修改Remind 文件</p>
-<pre><code class="php">&lt;?php
-
-namespace App\Admin\Actions\Post;
-
-use Encore\Admin\Actions\RowAction;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
-class Remind extends RowAction
-{
-   public $name = &#39;提醒&#39;;
-
-   public function handle(Model $model,Request $request)
-   {
-
-       return $this-&gt;response()-&gt;success(&#39;复制成功.&#39;.$model-&gt;Id)-&gt;refresh();
-   }
-}
-</code></pre>
-</li>
+        <h4 id="铁线蕨"><a href="#铁线蕨" class="headerlink" title="铁线蕨"></a>铁线蕨</h4><h6 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h6><ol>
+<li>不动声色是难的，大多数时候，喜形于色，张狂，愁肠百结，一日豪似一日地花开富贵，能够低眉的人简直太少了。</li>
 </ol>
-<ol start="8">
-<li><p>注册插件使用</p>
-</li>
-<li><p>修改\vendor\laravel-admin-ext\registration\src\Http\Controllers\VerificationController.php文件，加入“use\App\User;”<br>RegisterController.php 删除未引用到的库</p>
-</li>
-<li><p>laravel邮件配置</p>
-<p>\config\mail.php配置</p>
-</li>
+<h6 id="书纪"><a href="#书纪" class="headerlink" title="书纪"></a>书纪</h6><ol>
+<li>我想给你幸福，便是先要给自己幸福，我想给你富有，便是先要自己富有，准备，行动，永远不晚，却也从来迟晚。</li>
 </ol>
-<pre><code class="php">&#39;from&#39; =&gt; [
-     &#39;address&#39; =&gt; env(&#39;MAIL_FROM_ADDRESS&#39;, &#39;13046679681@163.com&#39;),
-     &#39;name&#39; =&gt; env(&#39;MAIL_FROM_NAME&#39;, &#39;上海码甸网络科技有限公司&#39;),
- ]</code></pre>
-<p>​    .env中配置</p>
-<pre><code class="php">   MAIL_MAILER=smtp
-   MAIL_HOST=smtp.163.com
-   MAIL_PORT=465
-   MAIL_USERNAME=13046679681@163.com
-   MAIL_PASSWORD=*******
-   MAIL_ENCRYPTION=SSL
-   MAIL_FROM_ADDRESS=13046679681@163.com
-   MAIL_FROM_NAME=&quot;${APP_NAME}&quot;</code></pre>
+<h4 id="羊齿植物"><a href="#羊齿植物" class="headerlink" title="羊齿植物"></a>羊齿植物</h4><h6 id="笔记-1"><a href="#笔记-1" class="headerlink" title="笔记"></a>笔记</h6><ol>
+<li>他一定是文雅的，低沉的，一定有着自己最动人的落寂，即使寂寞，他也是优雅地—他不愤世嫉俗，一点也不。</li>
+</ol>
+<h4 id="那些野生的植物"><a href="#那些野生的植物" class="headerlink" title="那些野生的植物"></a>那些野生的植物</h4><h6 id="笔记-2"><a href="#笔记-2" class="headerlink" title="笔记"></a>笔记</h6><ol>
+<li>一副丑陋而野蛮的长相，最放荡最自由的灵魂—有多么粗糙就有多细腻，有多无情就有多深情。</li>
+<li>孤独是一种庞大的能量，以核的速度辐射着。它能让时光弯曲，能让光阴产生弧度，这种要命的孤独呀，静水流深的弧度。</li>
+<li>那些热烈的、悲戚的。它即使孤独也不会被豢养！</li>
+<li>它想的，就是与时光为友，在天地之间，寻一份孤独的大美—我不要华美的姿容，我不要众星捧月，我不要斯人可想。</li>
+<li>因为它有野生的姿态，有一根骄傲的骨，有一颗最柔软的心。低下头来，为坟里人挡风雨，它不要花枝春满，不要月满天心。要的是这样孤僻地活着，活成一颗永远不与别树相同的树。</li>
+</ol>
+<h6 id="书纪-1"><a href="#书纪-1" class="headerlink" title="书纪"></a>书纪</h6><ol>
+<li>也许，我爱上的便是那一棵野生的树，那一棵骄傲的自由的野生的灵魂，哪怕只是靠近，也会被孤独的热烈的火所灼伤，只是还是喜欢，天翻地覆，不管不顾，一往无前地喜欢，那么就这样一直喜欢下去，直到把自己也活成野性而自由的树。</li>
+<li>也许，我真的是个很懦弱，很蠢笨的人，只是放任着情感毁坏自己，却不知自爱，自重，自尊，所以也没有人来爱我，重我，尊我。人，活成了什么样子，他的世界便是什么样子，我想这句话是对的，而真正的改变与自新，便是在时光的分分秒秒里去走好每一个脚印。</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 13046679681@163.com </span>
