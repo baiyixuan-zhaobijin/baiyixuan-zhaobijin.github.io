@@ -926,4 +926,45 @@ class Remind extends RowAction
         <tag>人生的诗</tag>
       </tags>
   </entry>
+  <entry>
+    <title>MySql数据类型</title>
+    <url>/2020/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93/MySql%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h3 id="MySql数据类型"><a href="#MySql数据类型" class="headerlink" title="MySql数据类型"></a>MySql数据类型</h3><h6 id="1-tinyint数据类型"><a href="#1-tinyint数据类型" class="headerlink" title="1. tinyint数据类型"></a>1. tinyint数据类型</h6><ol>
+<li>若字段设置为UNSIGNED类型，则只能存储0～255，不设置为UNSIGNED，则存储-128～127整数。</li>
+</ol>
+<h6 id="2-查询当前时间"><a href="#2-查询当前时间" class="headerlink" title="2. 查询当前时间"></a>2. 查询当前时间</h6><p><code>select now()</code></p>
+<h6 id="3-timestamp和datetime比较"><a href="#3-timestamp和datetime比较" class="headerlink" title="3. timestamp和datetime比较"></a>3. timestamp和datetime比较</h6><p>相同点，两者都表示：<code>YYYY-MM-DD HH:MM:SS[.fraction]</code>类型的时间</p>
+<p>不同点，timestamp输出linux时间戳</p>
+<p>对于跨时区应用,timestamp更适合</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySql</category>
+      </categories>
+      <tags>
+        <tag>数据类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>laravel·数据库操作1</title>
+    <url>/2020/06/07/%E5%90%8E%E7%AB%AF/PHP/laravel/laravel%C2%B7%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C1/</url>
+    <content><![CDATA[<h3 id="Laravel·数据库操作1"><a href="#Laravel·数据库操作1" class="headerlink" title="Laravel·数据库操作1"></a>Laravel·数据库操作1</h3><h6 id="1-truncate表"><a href="#1-truncate表" class="headerlink" title="1. truncate表"></a>1. truncate表</h6><p><code>DB::table(&#39;movieget&#39;).truncate();</code></p>
+<h6 id="2-事务"><a href="#2-事务" class="headerlink" title="2. 事务"></a>2. 事务</h6><pre><code class="php">DB::beginTransaction();
+$sqlInsert = &#39;....&#39;;
+$sqlDelete = &#39;....&#39;;
+if(DB::insert($sqlInsert) &amp;&amp; DB::delete($sqlDelete))
+    DB::commit();
+else
+    DB::rollback();</code></pre>
+<p>闭包形式</p>
+<pre><code class="php">DB:transaction(function(){});</code></pre>
+]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>laravel</category>
+      </categories>
+      <tags>
+        <tag>laravel</tag>
+      </tags>
+  </entry>
 </search>
