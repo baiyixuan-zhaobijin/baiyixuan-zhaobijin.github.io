@@ -960,12 +960,12 @@ else
 <pre><code class="php">DB:transaction(function(){});</code></pre>
 ]]></content>
       <categories>
+        <category>后端</category>
         <category>PHP</category>
         <category>laravel</category>
       </categories>
       <tags>
-        <tag>PHP</tag>
-        <tag>后端</tag>
+        <tag>laravel</tag>
       </tags>
   </entry>
   <entry>
