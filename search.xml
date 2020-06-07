@@ -1008,4 +1008,71 @@ else
         <tag>雪小禅</tag>
       </tags>
   </entry>
+  <entry>
+    <title>uni-app开发心得1</title>
+    <url>/2020/06/07/%E5%89%8D%E7%AB%AF/uni-app/uni-app%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%971/</url>
+    <content><![CDATA[<h3 id="uni-app开发心得1"><a href="#uni-app开发心得1" class="headerlink" title="uni-app开发心得1"></a>uni-app开发心得1</h3><h6 id="1-app标题设置"><a href="#1-app标题设置" class="headerlink" title="1.  app标题设置"></a>1.  app标题设置</h6><p>在pages.json中，配置app全局设置globalStyle变量，其中<code>navigationBarTitleText</code>即为app变量</p>
+<h6 id="2-Vue加载列表数据"><a href="#2-Vue加载列表数据" class="headerlink" title="2. Vue加载列表数据"></a>2. Vue加载列表数据</h6><pre><code class="html">&lt;template&gt;
+    &lt;view class=&quot;page&quot;&gt;
+        &lt;uni-section title=&quot;干货福利&quot; type=&quot;line&quot;&gt;&lt;/uni-section&gt;
+
+        &lt;view class=&quot;example-body&quot; v-for=&quot;(item , index) in CommonList&quot; :key=&quot;index&quot;&gt;
+            &lt;uni-link :href=&quot;item.link&quot; :text=&quot;item.title&quot;&gt;&lt;/uni-link&gt;
+        &lt;/view&gt;
+    &lt;/view&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    //获取数据
+    export default {
+        data() {
+            return {
+                CommonList: []
+            }
+        },
+        created: function() {
+            var _self = this;
+            uni.request({
+                url: &#39;http://www.ysf.kim/api/getCommonList&#39;, //接口地址
+                header: {
+                    &#39;content-type&#39;: &#39;application/x-www-form-urlencoded&#39;, //自定义请求头信息
+                },
+                success: (res) =&gt; {
+                    console.log(res.data);
+                    _self.CommonList = res.data;
+                }
+            });
+        },
+        methods: {
+
+        }
+    }
+&lt;/script&gt;</code></pre>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>uni-app</category>
+      </categories>
+      <tags>
+        <tag>小程序开发</tag>
+        <tag>h5开发</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>laravel开发心得1</title>
+    <url>/2020/06/07/%E5%90%8E%E7%AB%AF/PHP/laravel/laravel%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%971/</url>
+    <content><![CDATA[<h3 id="Laravel开发心得1"><a href="#Laravel开发心得1" class="headerlink" title="Laravel开发心得1"></a>Laravel开发心得1</h3><h6 id="1-路由设置，加版本号，方便日后扩展"><a href="#1-路由设置，加版本号，方便日后扩展" class="headerlink" title="1. 路由设置，加版本号，方便日后扩展"></a>1. 路由设置，加版本号，方便日后扩展</h6><pre><code class="php">Route::prefix(&#39;v1&#39;)-&gt;group(function () {
+    // more
+});</code></pre>
+<h6 id="2-跨域请求可使用laravel-cors扩展"><a href="#2-跨域请求可使用laravel-cors扩展" class="headerlink" title="2. 跨域请求可使用laravel-cors扩展"></a>2. 跨域请求可使用<strong><a href="https://github.com/fruitcake/laravel-cors" target="_blank" rel="noopener">laravel-cors</a></strong>扩展</h6><h6 id="3-Api验证，可使用jwt-auth扩展"><a href="#3-Api验证，可使用jwt-auth扩展" class="headerlink" title="3. Api验证，可使用jwt-auth扩展"></a>3. Api验证，可使用<a href="https://github.com/tymondesigns/jwt-auth" target="_blank" rel="noopener">jwt-auth</a>扩展</h6><h6 id="4-文档编写，可使用swagger-ui工具"><a href="#4-文档编写，可使用swagger-ui工具" class="headerlink" title="4. 文档编写，可使用swagger-ui工具"></a>4. 文档编写，可使用<a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="noopener">swagger-ui</a>工具</h6>]]></content>
+      <categories>
+        <category>后端</category>
+        <category>PHP</category>
+        <category>laravel</category>
+      </categories>
+      <tags>
+        <tag>laravel</tag>
+      </tags>
+  </entry>
 </search>
