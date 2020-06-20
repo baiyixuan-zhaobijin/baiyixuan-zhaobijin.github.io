@@ -1254,4 +1254,34 @@ else
         <tag>人间有味是清欢</tag>
       </tags>
   </entry>
+  <entry>
+    <title>pdf在线预览</title>
+    <url>/2020/06/21/%E5%89%8D%E7%AB%AF/%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/pdf%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/</url>
+    <content><![CDATA[<h4 id="PDF在线预览"><a href="#PDF在线预览" class="headerlink" title="PDF在线预览"></a>PDF在线预览</h4><h5 id="1-pdfobject插件"><a href="#1-pdfobject插件" class="headerlink" title="1. pdfobject插件"></a>1. pdfobject插件</h5><ol>
+<li><p>适用于PC端</p>
+</li>
+<li><p>使用实例</p>
+<pre><code class="php+HTML">&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js&#39;&gt;&lt;/script&gt;
+&lt;div class=&quot;video-player&quot; id=&quot;divCourseShow&quot;&gt;
+     &lt;script&gt;PDFObject.embed(&quot;&lt;?php echo $video[&#39;url&#39;];?&gt;&quot;, &quot;#divCourseShow&quot;);&lt;/script&gt;
+&lt;/div&gt;</code></pre>
+</li>
+</ol>
+<h5 id="2-pdf-js插件"><a href="#2-pdf-js插件" class="headerlink" title="2. pdf.js插件"></a>2. pdf.js插件</h5><ol>
+<li><p>使用于h5端</p>
+</li>
+<li><p>使用实例</p>
+<pre><code class="php+HTML">&lt;iframe id=&quot;pdfContainer&quot; src=&quot;http://xxxx/h5/js/pdf.js/web/viewer.html?file=&lt;?php echo $video[&#39;url&#39;];?&gt;&quot; width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>js插件</category>
+        <category>pdf</category>
+      </categories>
+      <tags>
+        <tag>js插件</tag>
+        <tag>pdf</tag>
+      </tags>
+  </entry>
 </search>
