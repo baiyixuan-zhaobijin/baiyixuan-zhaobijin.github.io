@@ -1284,4 +1284,18 @@ else
         <tag>pdf</tag>
       </tags>
   </entry>
+  <entry>
+    <title>PHP基础复习·第一期</title>
+    <url>/2020/07/05/%E5%90%8E%E7%AB%AF/PHP/%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/PHP%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%C2%B7%E7%AC%AC%E4%B8%80%E6%9C%9F/</url>
+    <content><![CDATA[<h5 id="1-随机数"><a href="#1-随机数" class="headerlink" title="1. 随机数"></a>1. 随机数</h5><pre><code class="php">$rand = mt_rand(1,100);
+echo $rand;</code></pre>
+]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>基础复习</category>
+      </categories>
+      <tags>
+        <tag>基础复习</tag>
+      </tags>
+  </entry>
 </search>
