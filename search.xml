@@ -1299,17 +1299,9 @@ echo $rand;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>那莲那禅那光阴/狂草·篆书</title>
-    <url>/2020/07/16/%E9%82%A3%E8%8E%B2%E9%82%A3%E7%A6%85%E9%82%A3%E5%85%89%E9%98%B4/%E7%8B%82%E8%8D%89%C2%B7%E7%AF%86%E4%B9%A6/</url>
-    <content><![CDATA[<hr>
-<p>title: 狂草|篆书<br>tags:</p>
-<ul>
-<li>散文</li>
-<li>雪小禅<br>categories:</li>
-<li>读书</li>
-<li>那莲那禅那光阴<br>author: 赵碧金<br>date: 2020-06-12 07:03:43<br>​—</li>
-</ul>
-<h4 id="狂草：-笑为花开，花因笑发"><a href="#狂草：-笑为花开，花因笑发" class="headerlink" title="狂草： 笑为花开，花因笑发"></a>狂草： 笑为花开，花因笑发</h4><h6 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h6><ol>
+    <title>狂草|篆书</title>
+    <url>/2020/06/12/%E9%82%A3%E8%8E%B2%E9%82%A3%E7%A6%85%E9%82%A3%E5%85%89%E9%98%B4/%E7%8B%82%E8%8D%89%C2%B7%E7%AF%86%E4%B9%A6/</url>
+    <content><![CDATA[<h4 id="狂草：-笑为花开，花因笑发"><a href="#狂草：-笑为花开，花因笑发" class="headerlink" title="狂草： 笑为花开，花因笑发"></a>狂草： 笑为花开，花因笑发</h4><h6 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h6><ol>
 <li>这分明，是跳舞，是弗拉门戈舞最后的微笑，最险象环生之后的直抵人心。是明心见性，是遇强则强，遇弱则弱，遇到金锁有钥匙，遇到妖精有法术。</li>
 <li>重若崩云，轻如蝉翼，他的动作和他的静美都有速度之美。动则如脱兔，静则如处子。那黑白之间，留白之处，亦有青蛇乱游，你不看则矣，一看则怕。</li>
 <li>轻薄的纸绢上，留下这样的狂舞。平正与险绝共存，落霞与孤鹜齐飞。</li>
@@ -1333,19 +1325,19 @@ echo $rand;</code></pre>
 <li>幸福是一首流淌在时光里的歌，不只低回婉转，更要无声有声。</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>读书</category>
+        <category>那莲那禅那光阴</category>
+      </categories>
+      <tags>
+        <tag>散文</tag>
+        <tag>雪小禅</tag>
+      </tags>
   </entry>
   <entry>
-    <title>那莲那禅那光阴/老磁带·胭脂</title>
-    <url>/2020/07/23/%E9%82%A3%E8%8E%B2%E9%82%A3%E7%A6%85%E9%82%A3%E5%85%89%E9%98%B4/%E8%80%81%E7%A3%81%E5%B8%A6%C2%B7%E8%83%AD%E8%84%82/</url>
-    <content><![CDATA[<hr>
-<p>title: 老磁带|胭脂<br>tags:</p>
-<ul>
-<li>散文</li>
-<li>雪小禅<br>categories:</li>
-<li>读书</li>
-<li>那莲那禅那光阴<br>author: 赵碧金<br>date: 2020-7-25 13:51:58<br>​—</li>
-</ul>
-<h4 id="老磁带"><a href="#老磁带" class="headerlink" title="老磁带"></a>老磁带</h4><h6 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h6><ol>
+    <title>老磁带|胭脂</title>
+    <url>/2020/07/25/%E9%82%A3%E8%8E%B2%E9%82%A3%E7%A6%85%E9%82%A3%E5%85%89%E9%98%B4/%E8%80%81%E7%A3%81%E5%B8%A6%C2%B7%E8%83%AD%E8%84%82/</url>
+    <content><![CDATA[<h4 id="老磁带"><a href="#老磁带" class="headerlink" title="老磁带"></a>老磁带</h4><h6 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h6><ol>
 <li>那些老磁带，到底是心头之肉，肉和筋连在了一起，老磁带是肉，光阴是筋，如何也分扯不开呀。</li>
 <li>乌溜溜的黑眼珠和你的笑脸，怎么也难忘记你容颜的转变。</li>
 </ol>
@@ -1367,5 +1359,13 @@ echo $rand;</code></pre>
 <li>所以，你一定要幸福哦，不然我会不开心的啦。</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>读书</category>
+        <category>那莲那禅那光阴</category>
+      </categories>
+      <tags>
+        <tag>散文</tag>
+        <tag>雪小禅</tag>
+      </tags>
   </entry>
 </search>
