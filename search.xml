@@ -1469,4 +1469,106 @@ echo $rand;</code></pre>
         <tag>读书</tag>
       </tags>
   </entry>
+  <entry>
+    <title>白衣轩技术日刊·20-07-27</title>
+    <url>/2020/07/27/%E6%97%A5%E5%88%8A/20-07-27-%E7%99%BD%E8%A1%A3%E8%BD%A9%E6%8A%80%E6%9C%AF%E6%97%A5%E5%88%8A%C2%B7/</url>
+    <content><![CDATA[<h3 id="20-07-27·技术日刊"><a href="#20-07-27·技术日刊" class="headerlink" title="20-07-27·技术日刊"></a>20-07-27·技术日刊</h3><h6 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h6><ol>
+<li><p><code>composer</code>使用</p>
+<pre><code class="php">require &#39;vendor/autoload.php&#39;;   
+use QL\QueryList;</code></pre>
+</li>
+<li><p><code>QueryList</code>使用</p>
+</li>
+</ol>
+<pre><code class="php">&lt;?php
+require &#39;vendor/autoload.php&#39;;
+use QL\QueryList;
+
+ignore_user_abort();
+set_time_limit(0);
+for ($n = 1 ;$n &lt;= 1;$n++) {
+    $url = &quot;https://jixi.58.com/ershouche/pn{$n}/?PGTID=0d100000-01c7-92a6-616f-3afaed1bae9c&amp;ClickID=57&quot;;
+    $html = file_get_contents($url);
+    $ql = QueryList::html($html);
+    $list = $ql-&gt;find(&#39;.info&#39;)-&gt;htmls();
+    $result = [];
+    $p = 0;
+    foreach ($list as $item) {
+        $query = QueryList::html($item);
+        $result[$p][&#39;title&#39;] = trim($query-&gt;find(&#39;h2&#39;)-&gt;text());
+        $content = trim($query-&gt;find(&#39;.info_params&#39;)-&gt;text());
+        $contentList = explode(&#39;·&#39;, $content);
+        $result[$p][&#39;buyDate&#39;]  = trim(str_replace(&#39;上牌&#39;, &#39;&#39;, $contentList[0]));
+        if (count($contentList)&gt;1) {
+            $result[$p][&#39;distance&#39;] = trim(str_replace(&#39;万公里&#39;, &#39;&#39;, $contentList[1]));
+        }
+        $result[$p][&#39;price&#39;] =  trim($query-&gt;find(&#39;.info--price&#39;)-&gt;text());
+        //$price = trim($query-&gt;find(&#39;.info--price&#39;)-&gt;text());
+        //$result[$p][&#39;price&#39;]  = trim(str_replace(&#39;万&#39;,&#39;&#39;,$price));
+        $p++;
+    }
+    print_r(&#39;&lt;pre&gt;&#39;);
+    print_r($result);
+}</code></pre>
+<h6 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h6><ol>
+<li><p><code>urllib</code>使用</p>
+<pre><code class="python">from urllib import request
+response = request.urlopen(r&#39;http://python.org/&#39;) # &lt;http.client.HTTPResponse object at 0x00000000048BC908&gt; HTTPResponse类型
+page = response.read()
+page = page.decode(&#39;utf-8&#39;)</code></pre>
+</li>
+<li><p><code>selenium</code>使用</p>
+<pre><code class="python">from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+driver = webdriver.Chrome(&#39;C:\\chromedriver.exe&#39;)
+driver.get(url)
+instance = WebDriverWait(driver,9000).until(EC.presence_of_element_located((By.ID,&#39;nav&#39;)))
+print(instance.text)
+driver.quit()</code></pre>
+</li>
+<li><p><code>Requests</code>使用</p>
+</li>
+</ol>
+<pre><code class="python">def getBaixing(url,urlList):
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, &#39;lxml&#39;)
+    data = soup.find_all(class_ = [&#39;listing-ad&#39;,&#39;item-regular&#39;,&#39;seen&#39;])
+    result = {}
+    for idx, item in enumerate(data):
+        if idx != 0:
+            href = item.find(class_ = [&#39;ad-title&#39;])[&#39;href&#39;]
+            if href not in urlList:
+                result[&#39;carType&#39;]   = item.find(class_ = [&#39;tag&#39;,&#39;tag-category&#39;]).text.strip()
+                result[&#39;title&#39;]     = item.find(class_ = [&#39;ad-title&#39;]).text.strip()
+                price               = str(item.find(class_ = [&#39;highlight&#39;]).text.strip())
+                if price[:-2] is &#39;&#39;:
+                    result[&#39;price&#39;]     = 0
+                else:
+                    result[&#39;price&#39;]     = price[:-2]
+                result[&#39;merchant&#39;]  = item.find(class_ = [&#39;ad-item-detail&#39;]).text.strip()
+                content             = item.find(class_ = [&#39;ad-item-detail&#39;]).find_next_sibling().text.strip()
+                content_list        = content.split(&#39;/&#39;)
+                if content_list[0].find(&#39;更新&#39;)&lt;0:
+                    result[&#39;mtype&#39;]     = content_list[0]
+                if len(content_list)&gt;1 and content_list[1].find(&#39;年&#39;)&gt;=0 : 
+                    result[&#39;buyDate&#39;] = content_list[1]
+                if len(content_list)&gt;2 and content_list[2].find(&#39;公里&#39;)&gt;=0:
+                    distance =  str(content_list[2]).strip()
+                    result[&#39;distance&#39;] = distance[:-4]
+                result[&#39;detailUrl&#39;]    = href
+                project_data_car.insert(result).execute()</code></pre>
+]]></content>
+      <categories>
+        <category>白衣轩日刊</category>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>技术</tag>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
 </search>
