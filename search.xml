@@ -1669,4 +1669,67 @@ driver.quit()</code></pre>
         <tag>读书</tag>
       </tags>
   </entry>
+  <entry>
+    <title>白衣轩技术日刊·20-07-28</title>
+    <url>/2020/07/28/%E6%97%A5%E5%88%8A/20-07-28-%E7%99%BD%E8%A1%A3%E8%BD%A9%E6%8A%80%E6%9C%AF%E6%97%A5%E5%88%8A/</url>
+    <content><![CDATA[<h3 id="20-07-28·技术日刊"><a href="#20-07-28·技术日刊" class="headerlink" title="20-07-28·技术日刊"></a>20-07-28·技术日刊</h3><h5 id="laravel基础"><a href="#laravel基础" class="headerlink" title="laravel基础"></a>laravel基础</h5><h6 id="1-Cookie使用"><a href="#1-Cookie使用" class="headerlink" title="1. Cookie使用"></a>1. <code>Cookie</code>使用</h6><ol>
+<li><p>添加Cookie: <code>Cookie::queue(&#39;test&#39;, &#39;Hello, Laravel&#39;, 10);</code></p>
+</li>
+<li><p>将Cookie添加到相应：</p>
+<pre><code class="php">public function index()
+\{
+//$response = new Response();
+$cookie = Cookie::make(&#39;test&#39;, &#39;Hello, Laravel&#39;, 10);
+　　 return \Response::make(&#39;index&#39;)-&gt;withCookie($cookie);
+\}</code></pre>
+</li>
+<li><p>设置永不过期的Cookie: <code>Cookie::forever(&#39;test&#39;, &#39;Hello, Laravel&#39;);</code></p>
+</li>
+<li><p>获取cookie</p>
+<pre><code class="php">$cookie = $request-&gt;cookie(&#39;test&#39;);
+$cookies = $request-&gt;cookie();
+$value = Cookie::get(&#39;name&#39;);</code></pre>
+</li>
+<li><p>模板中获取值：<code>&lt;div&gt;\{\{ $cookie-&gt;getValue() \}\}&lt;/div&gt;</code></p>
+</li>
+<li><p>清除Cookie: </p>
+<pre><code class="php">Cookie::forget(&#39;test&#39;);
+Cookie::queue(&#39;name&#39;, null , -1);</code></pre>
+<h6 id="2-Exception设置"><a href="#2-Exception设置" class="headerlink" title="2. Exception设置"></a>2. <code>Exception</code>设置</h6></li>
+<li><p>/app/Exceptions/Hander.php设置：</p>
+<pre><code class="php">public function render($request, Exception $exception)
+\{
+    //代码错误时，走下方自定义页面
+    if($exception instanceof \Symfony\Component\Debug\Exception\FatalErrorException) {
+        return response()-&gt;view(&#39;errors.500&#39;, [], 502);
+    }
+    return parent::render($request, $exception);
+\}</code></pre>
+</li>
+<li><p>/resources/views/errors/  添加相应错误页面</p>
+</li>
+</ol>
+<h6 id="2-PHP-基础"><a href="#2-PHP-基础" class="headerlink" title="2. PHP 基础"></a>2. PHP 基础</h6><ol>
+<li><p>设置</p>
+<pre><code class="php">$value = &#39;test&#39;;
+setcookie(&quot;TestCookie&quot;, $value);
+setcookie(&quot;TestCookie&quot;, $value, time()+3600);  //有效期一小时
+setcookie(&quot;TestCookie&quot;, $value, time()+3600, &quot;path/&quot;, &quot;jujiaoweb.com&quot;); //设置路径与域</code></pre>
+</li>
+<li><p>读取<br> <code>$value=$_COOKIE[&#39;name&#39;];</code></p>
+</li>
+<li><p>删除<br> <code>setcookie(&#39;name&#39;, &#39;&#39;, time()-1);</code></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>白衣轩日刊</category>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>laravel</tag>
+        <tag>PHP</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
 </search>
