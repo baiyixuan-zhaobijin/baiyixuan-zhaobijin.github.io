@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>laravel-admin框架安装 | 白衣轩</title>
-  <meta name="keywords" content=" laravel , laravel-admin , PHP , 快速开发 ">
-  <meta name="description" content="laravel-admin框架安装 | 白衣轩">
+  <title>第二章·扮老母鸡的大男人 | 白衣轩</title>
+  <meta name="keywords" content=" 励志 , 修身 , 刘墉 ">
+  <meta name="description" content="第二章·扮老母鸡的大男人 | 白衣轩">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="第二章·扮老母鸡的大男人笔记 在办公室里，你可以得罪忙的人，因为忙人没有时间跟你计较；你可千万别得罪闲人，因为闲人有的是时间跟你周旋；你更千万别瞧不起职位低的人。 能够用同样的心，想想别人的处境，忍耐自己的不便与不悦，非但不苛责，还主动减轻对方心情的负担，就是积阴德。 先上车后补票，就算被踢下车，也白坐了十几里。先斩头后上奏，就算皇上后悔，也已经人头落地。 愈是碰上小鬼当家，愈得把他奉为阎王。">
 <meta property="og:type" content="article">
@@ -1140,9 +1140,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-后端/PHP/laravel-admin/laravel-admin框架安装" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-你不可不知的人性/第二章·扮老母鸡的大男人" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">laravel-admin框架安装</h1>
+        <h1 class="article-title">第二章·扮老母鸡的大男人</h1>
     
     <div class="article-meta">
         
@@ -1151,11 +1151,9 @@
         <span class="book">
             <i class="iconfont icon-category"></i>
             
-            <a  data-rel="后端">后端</a> > 
+            <a  data-rel="读书">读书</a> > 
             
-            <a  data-rel="PHP">PHP</a> > 
-            
-            <a  data-rel="laravel-admin">laravel-admin</a>
+            <a  data-rel="你不可不知的人性">你不可不知的人性</a>
             
         </span>
         
@@ -1163,25 +1161,23 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">laravel</a>
+            <a class="color3">励志</a>
             
-            <a class="color4">laravel-admin</a>
+            <a class="color3">修身</a>
             
-            <a class="color4">PHP</a>
-            
-            <a class="color5">快速开发</a>
+            <a class="color3">刘墉</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-05-28 08:37:43'>2020-05-24 21:28</time>
+            发布时间 : <time class="date" title='最后更新: 2020-07-30 13:25:49'>2020-07-30 13:08</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:166</span>
+        <span>字数:368</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1200,7 +1196,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#laravel-admin框架安装"><span class="toc-text">laravel-admin框架安装</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#第二章·扮老母鸡的大男人"><span class="toc-text">第二章·扮老母鸡的大男人</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#笔记"><span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#书纪"><span class="toc-text">书纪</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1216,34 +1212,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="laravel-admin框架安装"><a href="#laravel-admin框架安装" class="headerlink" title="laravel-admin框架安装"></a>laravel-admin框架安装</h3><ol>
-<li><p><code>composer create-project --prefer-dist laravel/laravel blog</code></p>
-</li>
-<li><p>修改根目录下的<code>.env</code>配置文件，修改相应数据库连接</p>
-</li>
-<li><p><code>composer require encore/laravel-admin</code></p>
-</li>
-<li><p>发布资源：<code>php artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot;</code></p>
-</li>
-<li><p>修改数据库配置：<code>\config\database.php</code></p>
-<pre><code class="php">&#39;charset&#39; =&gt; &#39;utf8&#39;,
-&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,
-&#39;prefix&#39; =&gt; &#39;&#39;,
-&#39;strict&#39; =&gt; true,
-&#39;engine&#39; =&gt; &#39;InnoDB&#39;</code></pre>
-</li>
-<li><p>创建表：<code>php artisan admin:install</code></p>
-</li>
-<li><p>disk配置：在<code>\config/filesystems.php</code>中加入</p>
-<pre><code class="php">&#39;admin&#39; =&gt; [
-            &#39;driver&#39; =&gt; &#39;local&#39;,
-            &#39;root&#39; =&gt; public_path(&#39;upload&#39;),
-            &#39;visibility&#39; =&gt; &#39;public&#39;,
-            &#39;url&#39; =&gt; env(&#39;APP_URL&#39;).&#39;/public/puload/&#39;,
-            ]</code></pre>
-</li>
-<li><p>如页面显示404错误，则执行：<code>php artisan admin:install</code></p>
-</li>
+        <h4 id="第二章·扮老母鸡的大男人"><a href="#第二章·扮老母鸡的大男人" class="headerlink" title="第二章·扮老母鸡的大男人"></a>第二章·扮老母鸡的大男人</h4><h6 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h6><ol>
+<li>在办公室里，你可以得罪忙的人，因为忙人没有时间跟你计较；你可千万别得罪闲人，因为闲人有的是时间跟你周旋；你更千万别瞧不起职位低的人。</li>
+<li>能够用同样的心，想想别人的处境，忍耐自己的不便与不悦，非但不苛责，还主动减轻对方心情的负担，就是积阴德。</li>
+<li>先上车后补票，就算被踢下车，也白坐了十几里。先斩头后上奏，就算皇上后悔，也已经人头落地。</li>
+<li>愈是碰上小鬼当家，愈得把他奉为阎王。</li>
+</ol>
+<h6 id="书纪"><a href="#书纪" class="headerlink" title="书纪"></a>书纪</h6><ol>
+<li>人生世间，只要还活着，便有可能遇上想所未想，见所未见的境遇，这境遇或许有喜有悲，但只要心怀憧憬，便是美丽。</li>
+<li>年龄，也许只是这个世界强加给人的成见，而生活，才是自己给自己的实在，然后在这实在中缀之以繁花，饰之以锦绣，再在自己失意的时候送一朵花，在自己得意的时候读一卷书，那么生活便具有了天堂的实景。</li>
+<li>什么是预期，便是看到自己的华彩与荣耀，然后把这华彩荣耀付之以行动。</li>
+<li>什么是爱，那便是无论岁月山河，我都愿与你携手患难。</li>
+<li>幸福，不在于言，只在于心。</li>
 </ol>
 
       
